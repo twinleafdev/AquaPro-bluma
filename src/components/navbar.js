@@ -1,41 +1,44 @@
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
-
+// import { FaGithub } from 'react-icons/fa';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 import './style.scss';
-import gatsbyLogo from '../images/gatsby-icon.png';
-import bulmaLogo from '../images/bulma-logo.png';
+import logo from '../images/logo.png';
+import headBg from '../images/bg_head.jpg';
 
+const NavStyles = styled.div`
+	.navbar {
+		background-image: url(${headBg});
+		background-size: cover;
+		background-position: center top;
+		background-repeat: no-repeat;
+	}
+`;
 const Navbar = () => (
-	<div className="hero-head is-hidden-mobile">
+	<NavStyles className="hero-head is-hidden-mobile">
 		<nav className="navbar">
 			<div className="container">
 				<div className="navbar-brand">
-					<a
+					<Link
 						className="navbar-item"
-						href="https://github.com/amandeepmittal/gatsby-bulma-quickstart"
+						to="/"
 					>
-						<img src={gatsbyLogo} alt="Logo-1" />
-						<img src={bulmaLogo} alt="Logo-2" />
-					</a>
+						<img src={logo} alt="Logo" />
+					</Link>
 				</div>
 				<div id="navbarMenuHeroA" className="navbar-menu">
 					<div className="navbar-end">
-						<span className="navbar-item">
-							<a
-								className="button is-danger is-inverted"
-								href="https://github.com/amandeepmittal/gatsby-bulma-quickstart"
-							>
-								<span className="icon">
-									<FaGithub size="fa-2x" />
-								</span>
-								<span>Download</span>
-							</a>
-						</span>
+						<Link to="/spa-covers" className="navbar-item">
+							Spa Covers
+						</Link>
+						<Link to="/contact-us" className="navbar-item">
+							Contact Us
+						</Link>
 					</div>
 				</div>
 			</div>
 		</nav>
-	</div>
+	</NavStyles>
 );
 
 export default Navbar;
