@@ -1,48 +1,71 @@
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { useStaticQuery, graphql } from "gatsby";
+import styled from 'styled-components';
 import Layout from '../components/layout';
-import gatsbyLogo from '../images/gatsby-icon.png';
-import bulmaLogo from '../images/bulma-logo.png';
+import Form from '../components/form';
+import Text from '../components/home-text';
+import BackgroundSlider from 'gatsby-image-background-slider';
+import heroBg from '../images/hero-bg.jpg';
+
+
+const HeroStyles = styled.section`
+	.hero-body{
+		background-image: url(${heroBg});
+		background-size: cover;
+		background-position: center top;
+		background-repeat: no-repeat;
+	}
+`;
 
 const IndexPage = ({ children }) => (
 <Layout>
-<section className="hero gradientBg is-fullheight-with-navbar">
+<HeroStyles className="hero">
 <div className="hero-body">
-    <div className="container center">
-        <article className="media">
-            <figure className="is-left">
-                <span className="icon is-large ">
-                    <img src={gatsbyLogo} alt="gatsby-logo" />
-                </span>
-            </figure>
-            <figure className="is-left">
-                <span className="icon is-large">
-                    <img src={bulmaLogo} alt="bulma-logo" />
-                </span>
-            </figure>
-            <div className="media-content">
-                <div className="content">
-                    <h1 className="is-uppercase is-size-1 has-text-white">
-                        Hello from Bulma + Gatsby
-                    </h1>
-                    <p className="subtitle has-text-white is-size-3">
-                        A Bulma CSS + GatsbyJS Starter Kit{' '}
-                        <a
-                            className="button is-info is-inverted"
-                            href="https://github.com/amandeepmittal/gatsby-bulma-quickstart"
-                        >
-                            <span className="icon">
-                                <FaGithub size="fa-2x" />
-                            </span>
-                            <span>Download</span>
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </article>
+    <div className="container center slider-wrap">
+        
+    <BackgroundSlider 
+      query={useStaticQuery(graphql`
+        query {
+          backgrounds: allFile (filter: {sourceInstanceName: {eq: "backgrounds"}}){
+            nodes {
+              relativePath
+              childImageSharp {
+                fluid (maxWidth: 4000, quality: 100){
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      `)}
+      initDelay={2} // delay before the first transition (if left at 0, the first image will be skipped initially)
+      transition={2} // transition duration between images
+      duration={4} // how long an image is shown
+      // specify images to include (and their order) according to `relativePath`
+      images={["logo-slide.png", "hot-tub-sale.jpg", "chems.jpg"]} 
+
+      // pass down standard element props
+    //   style={{
+    //     transform: "rotate(-2deg) scale(.9)",
+    //   }}           
+    > 
+
+    </BackgroundSlider>
+    
+       
     </div>
 </div>
-</section>
+</HeroStyles>
+<div className="container py-5"> 
+    <div className="columns">
+        <div className="column is-two-thirds">
+            <Text />
+        </div>
+        <div className="column">
+            <Form />
+        </div>
+    </div>
+</div>
 </Layout>
 );
 

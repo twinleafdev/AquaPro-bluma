@@ -45,6 +45,21 @@ module.exports = {
 				anonymize: true
 			}
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+			  name: `pages`,
+			  path: `${__dirname}/src/pages`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+			  name: `backgrounds`,
+			  path: `${__dirname}/src/sider`, // wherever background images are stored /Users/mikeharrigan/Sites/aquaprospa/AquaPro-bulma/src/images/sider/chems.jpg
+			},
+		  },
+		`gatsby-transformer-remark`,
 		`gatsby-plugin-sitemap`
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.app/offline

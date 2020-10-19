@@ -8,13 +8,18 @@
 	display: flex;
 	background: linear-gradient(to right, $primary-color, $secondary-color);
 }
-
+.slider-wrap {
+	height: 33vw;
+	z-index: 1;
+}
+.navbar-item img {
+    max-height: 2.75rem;
+}
 .center {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
 .footer {
 	display: flex;
 	padding: 1.5rem 1.5rem;
