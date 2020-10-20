@@ -5,8 +5,8 @@ import Helmet from './helmet';
 //import Header from './header';
 //import Midsection from './midsection';
 import Layout from '../components/layout';
-import Footer from './footer';
-import Navbar from './navbar';
+// import Footer from './footer';
+// import Navbar from './navbar';
 import Colors from '../images/colors.jpg';
 import SpaCover from '../images/spa-cover.gif';
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import Layout from '../components/layout';
 import Form from '../components/form';
 import Colors from '../images/colors.jpg';
@@ -16,7 +17,7 @@ const SpaCovers = ({ children }) => (
               <p>Upgrade your cover today to an ECO or Altima! Our ECO cover features a superior heat seal to the surface of the spa shell, increased insulation, maximizes heat retention &amp; helps reduce energy bills!</p>
               <p>Our Altima cover features a 5 x 3 taper, aluminum channeling for support, padded vinyl covered handles, reinforced stitching, enhanced white thread, box “X” stitching, full length steam stopper and a double layered vinyl skirt!</p>
               <p>
-                  <img src={SpaCover} alt="spa covers" />
+                  <Img fluid={SpaCover} alt="spa covers" />
                   There are many upgrades available to make your spa cover fit your every need. Ask your dealer for details.
               </p>
               <div>

@@ -18,7 +18,7 @@ const NavStyles = styled.div`
 	}
 `;
 const Navbar = () => (
-	<NavStyles className="hero-head is-hidden-mobile">
+	<NavStyles className="hero-head">
 		<nav className="navbar">
 			<div className="container py-4">
 				<div className="navbar-brand">
