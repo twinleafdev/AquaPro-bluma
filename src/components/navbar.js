@@ -1,4 +1,5 @@
-import React from 'react';
+//import React from 'react';
+import React, { useState } from "react";
 // import { FaGithub } from 'react-icons/fa';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
@@ -17,7 +18,13 @@ const NavStyles = styled.div`
 		color: #fff;
 	}
 `;
-const Navbar = () => (
+
+
+	function Navbar () {
+
+		const [isExpanded, toggleExpansion] = useState(false)
+	  
+		return (
 	<NavStyles className="hero-head">
 		<nav className="navbar">
 			<div className="container py-4">
@@ -28,8 +35,17 @@ const Navbar = () => (
 					>
 						<img src={logo} alt="Logo" />
 					</Link>
+				
+					<a
+					onClick={() => toggleExpansion(!isExpanded)}
+					role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenuHeroA" >
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					</a>
 				</div>
-				<div id="navbarMenuHeroA" className="navbar-menu">
+
+				<div id="navbarMenuHeroA" className={`${ isExpanded ? `is-active` : `not-active` } navbar-menu`}>
 					<div className="navbar-end">
 						<Link to="/" className="navbar-item">
 							Home
@@ -45,6 +61,6 @@ const Navbar = () => (
 			</div>
 		</nav>
 	</NavStyles>
-);
+)}
 
 export default Navbar;

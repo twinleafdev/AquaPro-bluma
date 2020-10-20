@@ -6,7 +6,7 @@ import Form from '../components/form';
 import Text from '../components/home-text';
 import BackgroundSlider from 'gatsby-image-background-slider';
 import heroBg from '../images/hero-bg.jpg';
-
+import Banner from '../components/banner';
 
 const HeroStyles = styled.section`
 	.hero-body{
@@ -60,16 +60,17 @@ const IndexPage = ({ children }) => (
     </div>
 </div>
 </HeroStyles>
-<div className="container py-5 mx-5"> 
-    <div className="columns">
-        <div className="column is-two-thirds">
-            <Text />
-        </div>
-        <div className="column">
-            <Form />
+    <Banner />
+    <div className="container py-5 mx-5"> 
+        <div className="columns">
+            <div className="column is-two-thirds">
+                <Text />
+            </div>
+            <div className="column">
+                <Form />
+            </div>
         </div>
     </div>
-</div>
 </Layout>
 );
 
