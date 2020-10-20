@@ -2,7 +2,7 @@ import React from 'react'
 
 const Form = () => (
     <div className="sidebar">
-    <form name="contact" method="POST" data-netlify="true">
+    <form name="contact" method="POST" netlify>
 <div className="field">
   <label className="label">Name</label>
   <div className="control">
