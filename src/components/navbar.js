@@ -13,6 +13,9 @@ const NavStyles = styled.div`
 		background-position: center top;
 		background-repeat: no-repeat;
 	}
+	.navbar-item {
+		color: #fff;
+	}
 `;
 const Navbar = () => (
 	<NavStyles className="hero-head is-hidden-mobile">
@@ -28,6 +31,9 @@ const Navbar = () => (
 				</div>
 				<div id="navbarMenuHeroA" className="navbar-menu">
 					<div className="navbar-end">
+						<Link to="/" className="navbar-item">
+							Home
+						</Link>
 						<Link to="/spa-covers" className="navbar-item">
 							Spa Covers
 						</Link>

@@ -43,6 +43,8 @@ const SpaCovers = ({ children }) => (
               <p>All of our Spa Covers are manufactured using&nbsp;specialty manufactured vinyl for spa covers and energy&nbsp;efficient polystyrene inserts. Each insert is heat-sealed&nbsp;with a poly vapor moisture barrier to protect your spa cover&nbsp;against water absorption. Inhibitors in both the vinyl &amp; thread&nbsp;prevent premature aging of your spa cover, which all add up to a superior product.</p>
             </div>
             <div className="column">
+            <h3>Call to Schedule Service</h3>
+            <h2>732-237-2782</h2>
               <Form />
             </div>
           </div>

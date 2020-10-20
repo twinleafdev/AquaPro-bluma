@@ -15,6 +15,9 @@ const HeroStyles = styled.section`
 		background-position: center top;
 		background-repeat: no-repeat;
 	}
+    image {
+        object-fit: contain;
+    }
 `;
 
 const IndexPage = ({ children }) => (
@@ -45,9 +48,10 @@ const IndexPage = ({ children }) => (
       images={["logo-slide.png", "hot-tub-sale.jpg", "chems.jpg"]} 
 
       // pass down standard element props
-    //   style={{
-    //     transform: "rotate(-2deg) scale(.9)",
-    //   }}           
+      style={{
+        // transform: "rotate(-2deg) scale(.9)",
+        backgroundSize: 'contain', 
+      }}           
     > 
 
     </BackgroundSlider>

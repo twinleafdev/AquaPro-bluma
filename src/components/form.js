@@ -2,9 +2,6 @@ import React from 'react'
 
 const Form = () => (
     <div className="sidebar">
-    <h3>Call to Schedule Service</h3>
-    <h2>732-237-2782</h2>
-
     <form name="contact" method="POST" data-netlify="true">
 <div className="field">
   <label className="label">Name</label>

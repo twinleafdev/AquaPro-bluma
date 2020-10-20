@@ -4,13 +4,23 @@
 // Importing Bulma from node_modules
 @import '~bulma/bulma.sass';
 
+h2 {
+	font-size: 2.0rem;
+}
+h3 {
+	font-size: 1.6rem;
+	font-weight: bold;
+}
 .gradientBg {
 	display: flex;
 	background: linear-gradient(to right, $primary-color, $secondary-color);
 }
 .slider-wrap {
-	height: 33vw;
+	padding-bottom: 41%;
 	z-index: 1;
+}
+.slider-wrap img {
+	object-fit: contain !important;
 }
 .navbar-item img {
     max-height: 2.75rem;
