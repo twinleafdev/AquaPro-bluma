@@ -60,7 +60,7 @@ const IndexPage = ({ children }) => (
     </div>
 </div>
 </HeroStyles>
-<div className="container py-5"> 
+<div className="container py-5 mx-5"> 
     <div className="columns">
         <div className="column is-two-thirds">
             <Text />

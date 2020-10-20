@@ -5,7 +5,7 @@ import Spa from '../images/mpss-night.jpg';
 
 const SpaCovers = ({ children }) => (
 	<Layout>
-        <div className="container py-5">
+        <div className="container py-5 mx-5">
           <div className="columns">
             <div className="column is-two-thirds">
             <h3>Call to Schedule Service</h3>
