@@ -2,7 +2,7 @@ import React from 'react'
 
 const Form = () => (
     <div className="sidebar">
-    <form name="aquaProContact" method="post" action="/thank-you" netlify>
+    <form name="aquaProContact" method="POST" netlify>
     {/* <input type="hidden" name="form-name" value="aquaProContact" /> */}
 <div className="field">
   <label className="label">Name</label>
