@@ -2,31 +2,24 @@ import React from 'react'
 
 const Form = () => (
     <div className="sidebar">
-    <form name="contact" netlify>
+    <form name="aquaProContact" method="POST" netlify>
 <div className="field">
   <label className="label">Name</label>
   <div className="control">
-    <input className="input" type="text" placeholder="Your Name" />
+    <input className="input" type="text" placeholder="Your Name" name="name" />
   </div>
 </div>
 <div className="field">
   <label className="label">Email</label>
-  <div className="control has-icons-left has-icons-right">
-    <input className="input" type="email" placeholder="Your Email"  />
-    <span className="icon is-small is-left">
-      <i className="fas fa-envelope"></i>
-    </span>
-    <span className="icon is-small is-right">
-      <i className="fas fa-exclamation-triangle"></i>
-    </span>
+  <div className="control">
+    <input className="input" type="email" placeholder="Your Email" name="email" />
   </div>
-  {/* <p className="help is-danger">This email is invalid</p> */}
 </div>
 
 <div className="field">
   <label className="label">Message</label>
   <div className="control">
-    <textarea className="textarea" placeholder="Your Message"></textarea>
+    <textarea className="textarea" placeholder="Your Message" name="message"></textarea>
   </div>
 </div>
 
