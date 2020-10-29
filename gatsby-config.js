@@ -2,7 +2,7 @@ module.exports = {
 	siteMetadata: {
 		title: 'AquaPro Spas',
 		author: 'Mike Harrigan',
-		imageUrl: 'https://i.imgur.com/Vz81GEl.png',
+		imageUrl: 'https://i.imgur.com/eQT3UGk.png',
 		description: 'A Project to bootstrap your next Gatsby + Bulma site.',
 		keywords: `Web developer, Web, Developer, CSS, HTML, JS, Javascript, Gatsby, Bulma Developer, CSS3, HTML5, Seo, Starter`,
 		twitter: 'https://twitter.com/amanhimself',
