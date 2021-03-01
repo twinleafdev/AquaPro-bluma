@@ -18,6 +18,13 @@ const Form = () => (
 </div>
 
 <div className="field">
+  <label className="label">Phone* (required)</label>
+  <div className="control">
+    <input className="input" type="phone" placeholder="Your Phone Number" name="phone" />
+  </div>
+</div>
+
+<div className="field">
   <label className="label">Message</label>
   <div className="control">
     <textarea className="textarea" placeholder="Your Message" name="message"></textarea>
