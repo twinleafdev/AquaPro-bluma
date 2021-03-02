@@ -5,29 +5,29 @@ const Form = () => (
     <form name="aquaProContact" method="POST" action="/thank-you" data-netlify="true">
     <input type="hidden" name="form-name" value="aquaProContact" />
 <div className="field">
-  <label className="label">Name</label>
+  <label className="label" htmlFor="name">Name</label>
   <div className="control">
-    <input className="input" type="text" placeholder="Your Name" name="name" />
+    <input className="input" type="text" id="name" placeholder="Your Name" name="name" />
   </div>
 </div>
 <div className="field">
-  <label className="label">Email</label>
+  <label className="label" htmlFor="email">Email</label>
   <div className="control">
-    <input className="input" type="email" placeholder="Your Email" name="email" />
-  </div>
-</div>
-
-<div className="field">
-  <label className="label">Phone* (required)</label>
-  <div className="control">
-    <input className="input" type="phone" placeholder="Your Phone Number" name="phone" />
+    <input className="input" id="email" type="email" placeholder="Your Email" name="email" />
   </div>
 </div>
 
 <div className="field">
-  <label className="label">Message</label>
+  <label className="label" htmlFor="phone">Phone* (required)</label>
   <div className="control">
-    <textarea className="textarea" placeholder="Your Message" name="message"></textarea>
+    <input className="input" id="phone" type="phone" placeholder="Your Phone Number" name="phone" required/>
+  </div>
+</div>
+
+<div className="field">
+  <label className="label" htmlFor="message">Message</label>
+  <div className="control">
+    <textarea className="textarea" id="message" placeholder="Your Message" name="message"></textarea>
   </div>
 </div>
 

@@ -1,11 +1,13 @@
 //import React from 'react';
 import React, { useState } from "react";
 // import { FaGithub } from 'react-icons/fa';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import styled from 'styled-components';
 import './style.scss';
 import logo from '../images/logo.png';
 import headBg from '../images/bg_head.jpg';
+// import TransitionLink from "gatsby-plugin-transition-link";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const NavStyles = styled.div`
 	.navbar {
@@ -29,33 +31,33 @@ const NavStyles = styled.div`
 		<nav className="navbar">
 			<div className="container py-4">
 				<div className="navbar-brand">
-					<Link
+					<AniLink  fade
 						className="navbar-item"
 						to="/"
 					>
 						<img src={logo} alt="Logo" />
-					</Link>
+					</AniLink>
 				
-					<a
+					<button
 					onClick={() => toggleExpansion(!isExpanded)}
-					role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenuHeroA" >
+					className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenuHeroA" >
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
-					</a>
+					</button>
 				</div>
 
 				<div id="navbarMenuHeroA" className={`${ isExpanded ? `is-active` : `not-active` } navbar-menu`}>
 					<div className="navbar-end">
-						<Link to="/" className="navbar-item">
+						<AniLink  fade to="/" className="navbar-item">
 							Home
-						</Link>
-						<Link to="/spa-covers" className="navbar-item">
+						</AniLink>
+						<AniLink  fade to="/spa-covers" className="navbar-item">
 							Spa Covers
-						</Link>
-						<Link to="/contact-us" className="navbar-item">
+						</AniLink>
+						<AniLink fade to="/contact-us" className="navbar-item">
 							Contact Us
-						</Link>
+						</AniLink>
 					</div>
 				</div>
 			</div>

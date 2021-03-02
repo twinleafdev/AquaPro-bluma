@@ -28,6 +28,11 @@ h3 {
 	object-fit: contain !important;
 }
 
+.navbar-burger {
+	border: none;
+    background: none;
+}
+
 @media screen and (max-width: 1023px) {
 .navbar-menu {
     background-color: transparent;

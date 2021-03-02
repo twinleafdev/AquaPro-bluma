@@ -10,7 +10,7 @@ const SpaCovers = ({ children }) => (
         <div className="container py-5 mx-5">
           <div className="columns">
             <div className="column is-two-thirds">
-            <img src={Spa} />
+            <img src={Spa} alt="People in a Hot Tub" />
             </div>
             <div className="column">
               <Form />
